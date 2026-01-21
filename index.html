@@ -5,7 +5,28 @@
     <title>
         My first webpage
     </title>
-    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#363958',
+                        'brand-green': '#A4BC46',
+                        'brand-green-dark': '#95AF30',
+                        'brand-yellow': '#FABE4C',
+                        'brand-gray': '#3E3E3E',
+                        'brand-light-gray': '#6B6B6B',
+                    },
+                    fontFamily: {
+                        'roboto': ['Roboto', 'sans-serif'],
+                        'montserrat': ['Montserrat', 'Arial', 'sans-serif'],
+                        'bebas': ['Bebas Neue', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -13,198 +34,203 @@
         rel="stylesheet">
 </head>
 
-<body>
-    <div class="nav">
-        <div class="leftSection">
-            <img src="images/logo_icon.png" alt="logo_icon" class="logo">
-            <h2 class="brandName">
-                <span class="genz">GenZ</span> <span>Fashion</span>
+<body class="mt-10 mx-8 md:mx-16 lg:mx-32 max-w-[1440px] text-brand-blue font-roboto">
+    <!-- Navigation -->
+    <div class="flex justify-between items-center">
+        <div class="flex gap-2.5 font-montserrat items-center">
+            <img src="images/logo_icon.png" alt="logo_icon" class="w-14 h-10">
+            <h2 class="text-2xl font-bold">
+                <span class="text-brand-green">GenZ</span> <span>Fashion</span>
             </h2>
         </div>
-        <div class="rightSection">
-            <a href="#">Home</a>
-            <a href="#">Product</a>
-            <a href="#">About Us</a>
-            <a href="#">Contact</a>
+        <div class="flex gap-8">
+            <a href="#" class="transition duration-300 text-inherit no-underline cursor-pointer hover:text-brand-green-dark">Home</a>
+            <a href="#" class="transition duration-300 text-inherit no-underline cursor-pointer hover:text-brand-green-dark">Product</a>
+            <a href="#" class="transition duration-300 text-inherit no-underline cursor-pointer hover:text-brand-green-dark">About Us</a>
+            <a href="#" class="transition duration-300 text-inherit no-underline cursor-pointer hover:text-brand-green-dark">Contact</a>
         </div>
     </div>
 
-    <div class="heroSection">
+    <!-- Hero Section -->
+    <div class="flex justify-between">
         <div>
-            <div class="heroText">
-                <div style="color: #FABE4C">BE THE GENZS</div>
+            <div class="text-7xl md:text-8xl font-bebas mt-36">
+                <div class="text-brand-yellow">BE THE GENZS</div>
                 OF WINTER
             </div>
-            <div class="lorem">
-                <p style="margin-left: 4px;">Lorem Ipsum is simply dummy text of the printing <br>
+            <div class="text-base text-brand-gray">
+                <p class="ml-1">Lorem Ipsum is simply dummy text of the printing <br>
                     and typesetting industry</p>
             </div>
             <div>
-                <button class="buyNowButton">
-                    <img src="images/shopping-cart 1.png" alt="" class="cart">
+                <button class="bg-brand-green-dark text-white border-none py-4 px-8 text-base cursor-pointer rounded-lg inline-flex items-center gap-1.5 font-roboto font-medium transition duration-300 hover:bg-brand-green">
+                    <img src="images/shopping-cart 1.png" alt="" class="w-5 h-4">
                     BUY NOW
                 </button>
             </div>
 
         </div>
         <div>
-            <img src="images/model.png" alt="modelImage" class="modelImage">
+            <img src="images/model.png" alt="modelImage" class="h-[450px] w-[450px] mt-24">
         </div>
     </div>
 
-    <div style="margin-top: 90px;">
-        <p class="featuredText">
+    <!-- Woman Jacket Section -->
+    <div class="mt-24">
+        <p class="text-brand-blue text-5xl font-bebas">
             WOMAN JACKET
         </p>
     </div>
-    <div class="wSection">
-        <div class="outerContainer">
-            <div class="innerContainer">
-                    <img class="product_logo" src="images/jacket-1.png" alt="">
+    <div class="flex flex-wrap gap-5 justify-center">
+        <div class="p-7 bg-white rounded-2xl shadow-md flex-1 max-w-[400px] min-w-[280px]">
+            <div class="p-4 bg-gray-100 rounded-2xl">
+                    <img class="w-full max-w-[293px] h-auto block mx-auto" src="images/jacket-1.png" alt="">
             </div>
-            <div class="cart_text">
+            <div class="text-2xl font-bold">
                 Yellow Coat Jacket
             </div>
             <p>Lorem Ipsum is simply dummy text of the printing
                     and typesetting industry</p>
-            <div class="amount">
+            <div class="text-4xl text-brand-yellow flex justify-between font-bold">
                 $234
-                <button class="buyNowButton">
-                    <img src="images/shopping-cart 1.png" alt="" class="cart">
+                <button class="bg-brand-green-dark text-white border-none py-4 px-8 text-base cursor-pointer rounded-lg inline-flex items-center gap-1.5 font-roboto font-medium transition duration-300 hover:bg-brand-green">
+                    <img src="images/shopping-cart 1.png" alt="" class="w-5 h-4">
                     BUY NOW
                 </button>
             </div>
         </div>
 
-        <div class="outerContainer">
-            <div class="innerContainer">
-                    <img class="product_logo" src="images/jacket-2.png" alt="">
+        <div class="p-7 bg-white rounded-2xl shadow-md flex-1 max-w-[400px] min-w-[280px]">
+            <div class="p-4 bg-gray-100 rounded-2xl">
+                    <img class="w-full max-w-[293px] h-auto block mx-auto" src="images/jacket-2.png" alt="">
             </div>
-            <div class="cart_text">
+            <div class="text-2xl font-bold">
                 Yellow Coat Jacket
             </div>
             <p>Lorem Ipsum is simply dummy text of the printing
                     and typesetting industry</p>
-            <div class="amount">
+            <div class="text-4xl text-brand-yellow flex justify-between font-bold">
                 $234
-                <button class="buyNowButton">
-                    <img src="images/shopping-cart 1.png" alt="" class="cart">
+                <button class="bg-brand-green-dark text-white border-none py-4 px-8 text-base cursor-pointer rounded-lg inline-flex items-center gap-1.5 font-roboto font-medium transition duration-300 hover:bg-brand-green">
+                    <img src="images/shopping-cart 1.png" alt="" class="w-5 h-4">
                     BUY NOW
                 </button>
             </div>
         </div>
 
-        <div class="outerContainer">
-            <div class="innerContainer">
-                    <img class="product_logo" src="images/jacket-3.png" alt="">
+        <div class="p-7 bg-white rounded-2xl shadow-md flex-1 max-w-[400px] min-w-[280px]">
+            <div class="p-4 bg-gray-100 rounded-2xl">
+                    <img class="w-full max-w-[293px] h-auto block mx-auto" src="images/jacket-3.png" alt="">
             </div>
-            <div class="cart_text">
+            <div class="text-2xl font-bold">
                 Yellow Coat Jacket
             </div>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            <div class="amount">
+            <div class="text-4xl text-brand-yellow flex justify-between font-bold">
                 $234
-                <button class="buyNowButton">
-                    <img src="images/shopping-cart 1.png" alt="" class="cart">
+                <button class="bg-brand-green-dark text-white border-none py-4 px-8 text-base cursor-pointer rounded-lg inline-flex items-center gap-1.5 font-roboto font-medium transition duration-300 hover:bg-brand-green">
+                    <img src="images/shopping-cart 1.png" alt="" class="w-5 h-4">
                     BUY NOW
                 </button>
             </div>
         </div>
     </div>
 
-    <div style="margin-top: 90px;">
-        <p class="featuredText">
+    <!-- Man Jacket Section -->
+    <div class="mt-24">
+        <p class="text-brand-blue text-5xl font-bebas">
             MAN JACKET
         </p>
     </div>
 
-    <div class="mSection">
-        <div class="outerContainer">
-            <div class="innerContainer">
-                    <img class="product_logo" src="images/jacket-4.png" alt="">
+    <div class="flex flex-wrap gap-5 justify-center">
+        <div class="p-7 bg-white rounded-2xl shadow-md flex-1 max-w-[400px] min-w-[280px]">
+            <div class="p-4 bg-gray-100 rounded-2xl">
+                    <img class="w-full max-w-[293px] h-auto block mx-auto" src="images/jacket-4.png" alt="">
             </div>
-            <div class="cart_text">
+            <div class="text-2xl font-bold">
                 Yellow Coat Jacket
             </div>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            <div class="amount">
+            <div class="text-4xl text-brand-yellow flex justify-between font-bold">
                 $234
-                <button class="buyNowButton">
-                    <img src="images/shopping-cart 1.png" alt="" class="cart">
+                <button class="bg-brand-green-dark text-white border-none py-4 px-8 text-base cursor-pointer rounded-lg inline-flex items-center gap-1.5 font-roboto font-medium transition duration-300 hover:bg-brand-green">
+                    <img src="images/shopping-cart 1.png" alt="" class="w-5 h-4">
                     BUY NOW
                 </button>
             </div>
         </div>
 
-        <div class="outerContainer">
-            <div class="innerContainer">
-                    <img class="product_logo" src="images/jacket-5.png" alt="">
+        <div class="p-7 bg-white rounded-2xl shadow-md flex-1 max-w-[400px] min-w-[280px]">
+            <div class="p-4 bg-gray-100 rounded-2xl">
+                    <img class="w-full max-w-[293px] h-auto block mx-auto" src="images/jacket-5.png" alt="">
             </div>
-            <div class="cart_text">
+            <div class="text-2xl font-bold">
                 Yellow Coat Jacket
             </div>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            <div class="amount">
+            <div class="text-4xl text-brand-yellow flex justify-between font-bold">
                 $234
-                <button class="buyNowButton">
-                    <img src="images/shopping-cart 1.png" alt="" class="cart">
+                <button class="bg-brand-green-dark text-white border-none py-4 px-8 text-base cursor-pointer rounded-lg inline-flex items-center gap-1.5 font-roboto font-medium transition duration-300 hover:bg-brand-green">
+                    <img src="images/shopping-cart 1.png" alt="" class="w-5 h-4">
                     BUY NOW
                 </button>
             </div>
         </div>
 
-        <div class="outerContainer">
-            <div class="innerContainer">
-                    <img class="product_logo" src="images/jacket-6.png" alt="">
+        <div class="p-7 bg-white rounded-2xl shadow-md flex-1 max-w-[400px] min-w-[280px]">
+            <div class="p-4 bg-gray-100 rounded-2xl">
+                    <img class="w-full max-w-[293px] h-auto block mx-auto" src="images/jacket-6.png" alt="">
             </div>
-            <div class="cart_text">
+            <div class="text-2xl font-bold">
                 Yellow Coat Jacket
             </div>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            <div class="amount">
+            <div class="text-4xl text-brand-yellow flex justify-between font-bold">
                 $234
-                <button class="buyNowButton">
-                    <img src="images/shopping-cart 1.png" alt="" class="cart">
+                <button class="bg-brand-green-dark text-white border-none py-4 px-8 text-base cursor-pointer rounded-lg inline-flex items-center gap-1.5 font-roboto font-medium transition duration-300 hover:bg-brand-green">
+                    <img src="images/shopping-cart 1.png" alt="" class="w-5 h-4">
                     BUY NOW
                 </button>
             </div>
         </div>
     </div>
-    <div class ="footerSection">
 
-        <div class="footerSectionLeft">
-            <div class="logo1">
+    <!-- Footer Section -->
+    <div class="flex justify-between items-center mt-24 py-10 gap-10">
+
+        <div class="flex flex-col gap-5 flex-1">
+            <div class="flex items-center px-7 py-6 bg-gray-50 rounded-2xl gap-5 shadow-md">
                 <div>
-                    <img src="images/house.png" alt="house_icon" class="house_icon">
-
+                    <img src="images/house.png" alt="house_icon" class="w-16 h-16 object-contain">
                 </div>
-                <div class="align_txt">
-                    <p class="txt">Find the Perfect Fit</p>
+                <div class="text-sm text-brand-light-gray leading-relaxed">
+                    <p class="text-xl font-bold text-brand-blue mb-1">Find the Perfect Fit</p>
                     Everybody is different, which is why we
                     offer styles for every body.
                 </div>
             </div>
-            <div class="logo1">
-                <img src="images/box.png" alt="house_icon" class="box_icon">
-                <div>
-                    <p class="txt">
+            <div class="flex items-center px-7 py-6 bg-gray-50 rounded-2xl gap-5 shadow-md">
+                <img src="images/box.png" alt="house_icon" class="w-16 h-16 object-contain">
+                <div class="text-sm text-brand-light-gray leading-relaxed">
+                    <p class="text-xl font-bold text-brand-blue mb-1">
                         Free Exchanges
                     </p>
                     One of the many reasons you can shop
                     with peace of mind.
                 </div>
             </div>
-            <div class="logo1">
-                <img src="images/question.png" alt="house_icon" class="question_icon">
-                <div>
-                    <p class="txt"> Contact Our Seller</p>
+            <div class="flex items-center px-7 py-6 bg-gray-50 rounded-2xl gap-5 shadow-md">
+                <img src="images/question.png" alt="house_icon" class="w-16 h-16 object-contain">
+                <div class="text-sm text-brand-light-gray leading-relaxed">
+                    <p class="text-xl font-bold text-brand-blue mb-1"> Contact Our Seller</p>
                     They are here to help you. That's quite 
                     literally what we pay them for.
                 </div>
             </div>
         </div>
-        <div class="footerSectionRight">
-            <img src="images/shopping.png" alt="">
+        <div class="flex-1 flex justify-center items-center">
+            <img src="images/shopping.png" alt="" class="max-w-full h-auto">
         </div>
     </div>
     
